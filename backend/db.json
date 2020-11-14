@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Notebook Dell G5",
+      "price": 5600.00
+    },
+    {
+      "id": 2,
+      "name": "LG SmartTV 4K+",
+      "price": 8450.00
+    },
+    {
+      "id": 3,
+      "name": "Mouse Zowie EC1-B",
+      "price": 300.00
+    }
+  ]
+}

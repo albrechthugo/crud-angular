@@ -1,0 +1,12 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server": "json-server --watch db.json --port 4201"
+  },
+  "dependencies": {
+    "json-server": "^0.16.2"
+  }
+}
