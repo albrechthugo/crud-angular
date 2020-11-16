@@ -28,3 +28,7 @@
   color: #7159c1;
   font-weight: 400;
 }
+
+.footer .footer__wrapper p a:hover {
+  text-decoration: underline;
+}

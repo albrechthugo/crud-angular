@@ -1,6 +1,7 @@
 .header {
   width: 100%;
   height: 4rem;
+  background-color: #7159c1;
 }
 
 .header .header__wrapper {
@@ -31,22 +32,25 @@
   justify-content: flex-end;
 }
 
-.header .header__wrapper .header__nav ul li {
+.header .header__wrapper .header__nav ul a {
   font-size: 0.9rem;
   font-weight: 400;
-  list-style: none;
   display: flex;
   align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.header .header__wrapper .header__nav ul li:last-of-type {
+.header .header__wrapper .header__nav ul a:last-of-type {
   margin-left: 2rem;
 }
 
-.header .header__wrapper .header__nav ul li i {
+.header .header__wrapper .header__nav ul a i {
   margin-right: 0.6rem;
 }
 
-.header .header__wrapper .header__nav ul li:hover {
+.header .header__wrapper .header__nav ul a:hover {
+  background-color: #fafafa;
+  border-radius: 30px;
   color: #7159c1;
 }
