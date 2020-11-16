@@ -7,22 +7,30 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { ProductRegisterComponent } from './components/template/product-register/product-register.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ProductsComponent } from './pages/products/products.component';
+import { CreateProductComponent } from './components/product/create-product/create-product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ProductRegisterComponent,
+    HomeComponent,
+    ProductsComponent,
+    CreateProductComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatCardModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
