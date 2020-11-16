@@ -1,0 +1,17 @@
+.home.mat-elevation-z2 {
+  background-color: #FFF;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.home.mat-elevation-z2 .home__title {
+  margin-bottom: 25px;
+  color: #7159c1;
+}
