@@ -5,15 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { HeaderComponent } from './components/template/header/header.component';
-import { FooterComponent } from './components/template/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ProductsComponent } from './pages/products/products.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+import { HeaderComponent } from './components/template/header/header.component';
+import { FooterComponent } from './components/template/footer/footer.component';
 import { CreateProductComponent } from './components/product/create-product/create-product.component';
+
+import { HomeComponent } from './pages/home/home.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { ListProductsComponent } from './components/product/list-products/list-products.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { CreateProductComponent } from './components/product/create-product/crea
     HomeComponent,
     ProductsComponent,
     CreateProductComponent,
+    ListProductsComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,9 +34,11 @@ import { CreateProductComponent } from './components/product/create-product/crea
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {}
