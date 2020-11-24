@@ -1,26 +1,26 @@
 <div class="form__container">
-  <form action="" method="post">
+  <form>
     <div class="form__field">
-      <label for="">Nome</label>
-      <input type="text" name="" id="" placeholder="Apple MacBook Pro">
+      <label>Nome</label>
+      <input type="text" name="name" placeholder="Apple MacBook Pro" [(ngModel)]="product.name">
     </div>
 
     <div class="form__field">
-      <label for="">Descrição</label>
-      <input type="text" name="" id="" maxlength="1000" placeholder="Faça mais, descubra um novo conceito de produtividade...">
+      <label>Descrição</label>
+      <input type="text" name="description" maxlength="1000" placeholder="Faça mais, descubra um novo conceito de produtividade..." [(ngModel)]="product.description">
     </div>
 
     <div class="form__field">
-      <label for="">Valor</label>
-      <input type="number" name="" id="" placeholder="R$25.309,00">
+      <label>Valor</label>
+      <input type="number" name="price" placeholder="R$25.309,00" [(ngModel)]="product.price">
     </div>
 
     <div class="form__field">
-      <label for="">Especificações técnicas</label>
-      <input type="text" name="" id="" maxlength="1000" placeholder="Processador: i9-9900K">
+      <label>Especificações técnicas</label>
+      <input type="text" name="specifications" maxlength="1000" placeholder="Processador: i9-9900K" [(ngModel)]="product.specifications">
     </div>
 
-    <button type="submit">
+    <button type="submit" (click)="handleSubmitClick()">
       Adicionar
     </button>
   </form>
