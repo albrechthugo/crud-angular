@@ -1,25 +1,11 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Notebook Dell G5",
-      "description": "",
-      "price": 5600.00,
-      "specifications": ""
-    },
-    {
-      "id": 2,
-      "name": "LG SmartTV 4K+",
-      "description": "",
-      "price": 8450.00,
-      "specifications": ""
-    },
-    {
-      "id": 3,
-      "name": "Mouse Zowie EC1-B",
-      "description": "",
-      "price": 300.00,
-      "specifications": ""
+      "name": "teste",
+      "price": "540",
+      "specifications": null,
+      "description": "fodaasew",
+      "id": 1
     }
   ]
 }
