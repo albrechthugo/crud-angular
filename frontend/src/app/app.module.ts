@@ -19,6 +19,8 @@ import { CreateProductComponent } from './components/product/create-product/crea
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ListProductsComponent } from './components/product/list-products/list-products.component';
+import { ProductLoadingComponent } from './components/product/product-loading/product-loading.component';
+import { ActionButtonComponent } from './components/buttons/action-button/action-button.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ListProductsComponent } from './components/product/list-products/list-p
     ProductsComponent,
     CreateProductComponent,
     ListProductsComponent,
+    ProductLoadingComponent,
+    ActionButtonComponent,
   ],
   imports: [
     BrowserModule,
