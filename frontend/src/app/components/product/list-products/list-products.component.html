@@ -5,16 +5,24 @@
     </button>
   </a>
 
-    <section class="product__container" *ngFor="let product of products">
-      <div class="product__content">
-        <strong>#{{product.id}}</strong>
-        <h3>{{product.name}}</h3>
-        <h4>R${{product.price}}</h4>
+    <app-product-loading *ngIf="!loadingProductList"></app-product-loading>
 
-        <div class="product__options">
-          <button class="edit btn">Editar</button>
-          <button class="delete btn">Deletar</button>
+    <div *ngIf="loadingProductList">
+      <section class="product__container" *ngFor="let product of products">
+        <div class="product__content">
+          <strong>#{{product.id}}</strong>
+          <h3>{{product.name}}</h3>
+          <h4>R${{product.price}}</h4>
+
+          <div class="product__options">
+            <!-- <app-action-button></app-action-button>
+            <app-action-button></app-action-button> -->
+
+            <button class="edit btn">Editar</button>
+            <button class="delete btn" (click)="handleDeleteClick(product.id)">Deletar</button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
 </div>

@@ -54,6 +54,7 @@
   right: 24rem;
   font-size: 1.2rem;
   font-weight: 600;
+  text-align: left;
   color: #008000;
 }
 
@@ -92,7 +93,7 @@
   right: 15px;
 }
 
-.list-products .product__container .product__content .product__options button {
+.edit.btn, .delete.btn {
   width: 120px;
   height: 40px;
   border: 0;
@@ -103,16 +104,13 @@
   color: #fff;
   cursor: pointer;
   transition: opacity 0.2s;
+  background-color: #1E88E5;
 }
 
-.list-products .product__container .product__content .product__options button:hover {
+.delete.btn {
+  background-color: #F62D2D;
+}
+
+.edit.btn:hover, .delete.btn:hover {
   opacity: 80%;
-}
-
-.list-products .product__container .product__content .product__options .edit.btn {
-  background-color: #007bff;
-}
-
-.list-products .product__container .product__content .product__options .delete.btn {
-  background-color: #dc3545;
 }
