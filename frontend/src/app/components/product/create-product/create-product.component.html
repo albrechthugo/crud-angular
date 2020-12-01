@@ -12,7 +12,7 @@
 
     <div class="form__field">
       <label>Valor</label>
-      <input type="number" name="price" placeholder="R$25.309,00" [(ngModel)]="product.price">
+      <input type="text" name="price" placeholder="R$25.309,00" [(ngModel)]="product.price" (keyup)="formatNumberToReal()">
     </div>
 
     <div class="form__field">

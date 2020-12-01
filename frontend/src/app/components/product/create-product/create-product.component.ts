@@ -28,4 +28,5 @@ export class CreateProductComponent implements OnInit {
     });
   }
 
+  formatNumberToReal(): void {}
 }
