@@ -2,5 +2,5 @@
 
 # CRUD Angular - Cadastro de Produtos
 
-## Aplicação em desenvolvimento...
+## Aplicação em desenvolvimento
 
