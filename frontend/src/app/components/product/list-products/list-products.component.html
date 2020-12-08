@@ -18,11 +18,18 @@
             <!-- <app-action-button></app-action-button>
             <app-action-button></app-action-button> -->
 
-            <button class="edit btn">Editar</button>
+            <button class="edit btn" (click)="activeDeactiveModal(product)">Editar</button>
             <button class="delete btn" (click)="handleDeleteClick(product.id)">Deletar</button>
           </div>
         </div>
       </section>
     </div>
+
+    <app-edit-product
+      *ngIf="openModal"
+      (onClose)="modalClosed($event)"
+      [productEditable]="productEditable"
+    >
+    </app-edit-product>
 
 </div>

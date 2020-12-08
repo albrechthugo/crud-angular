@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, OnChanges} from '@angular/core';
 import { ProductService } from "../product.service";
 import { Product } from "../product.model";
 
@@ -7,9 +7,14 @@ import { Product } from "../product.model";
   templateUrl: './list-products.component.html',
   styleUrls: ['./list-products.component.css']
 })
+
 export class ListProductsComponent implements OnInit {
 
   loadingProductList: boolean = false;
+
+  openModal: boolean = false;
+
+  productEditable: any;
 
   products: Product[];
 
@@ -18,32 +23,37 @@ export class ListProductsComponent implements OnInit {
     price: null,
     description: '',
     specifications: ''
-  }
+  };
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     this.productService.getProductList().subscribe(products => {
       this.products = products;
-    })
+    });
 
     this.productService.getProductList().subscribe(products => {
-      if(products != null) {
+      if (products != null) {
         this.loadingProductList = true;
       }
-    })
+    });
   }
 
-  handleEditClick(product: Product): void {
-    this.productService.editProduct(product).subscribe(() => {
-      this.productService.showConfirmationPopUp('Produto EDITADO com sucesso!');
-    })
+  ngOnChanges(changes: Product): void {}
+
+  activeDeactiveModal(product): void {
+    this.productEditable = product;
+    this.openModal = !this.openModal;
+  }
+
+  modalClosed(isClosed) {
+    this.openModal = false;
   }
 
   handleDeleteClick(id: number): void {
     this.productService.deleteProduct(id).subscribe(() => {
       this.productService.showConfirmationPopUp('Produto DELETADO com sucesso!');
-    })
+    });
   }
 
 }
