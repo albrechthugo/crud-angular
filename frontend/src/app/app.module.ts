@@ -21,6 +21,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ListProductsComponent } from './components/product/list-products/list-products.component';
 import { ProductLoadingComponent } from './components/product/product-loading/product-loading.component';
 import { ActionButtonComponent } from './components/buttons/action-button/action-button.component';
+import { EditProductComponent } from './components/product/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ActionButtonComponent } from './components/buttons/action-button/action
     ListProductsComponent,
     ProductLoadingComponent,
     ActionButtonComponent,
+    EditProductComponent,
   ],
   imports: [
     BrowserModule,
