@@ -19,11 +19,13 @@ export class ProductService {
   }
 
   deleteProduct(id: number): Observable<Product> {
-    return this.http.delete<Product>(`${this.baseUrl}/${id}`);
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete<Product>(url);
   }
 
   editProduct(product: Product): Observable<Product> {
-    return this.http.put<Product>(`${this.baseUrl}/${product.id}`, product);
+    const url = `${this.baseUrl}/${product.id}`
+    return this.http.put<Product>(url, product);
   }
 
   getProductList(): Observable<Product[]> {
