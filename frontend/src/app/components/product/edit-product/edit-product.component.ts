@@ -14,10 +14,8 @@ export class EditProductComponent implements OnInit {
   @Output()
   onClose: EventEmitter<boolean> = new EventEmitter();
 
-  @Input()
-  productEditable: any;
-
-  openModal: boolean = false;
+  @Input() // recebe do pai o produto a ser editado
+  productEditable: Product;
 
   product: Product = {
     name: '',
@@ -28,14 +26,15 @@ export class EditProductComponent implements OnInit {
 
   constructor(private productService: ProductService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.product = this.productEditable;
+  }
 
   closeModal() {
     this.onClose.emit(true);
   }
 
-  handleEditClick(): void {
-    this.product = this.productEditable;
+  handleEditClick() {
     this.productService.editProduct(this.product).subscribe(() => {
       this.productService.showConfirmationPopUp('Produto EDITADO com sucesso!');
       this.closeModal();
