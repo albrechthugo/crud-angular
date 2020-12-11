@@ -87,7 +87,7 @@
 }
 
 .list-products .product__container .product__content .product__options {
-  width: 250px;
+  width: 320px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -95,7 +95,7 @@
   right: 15px;
 }
 
-.list-products .product__container .product__content .product__options .edit.btn, .delete.btn {
+.list-products .product__container .product__content .product__options .edit.btn, .delete.btn, .show.more {
   width: 120px;
   height: 40px;
   border: 0;
@@ -113,6 +113,28 @@
   background-color: #F62D2D;
 }
 
-.list-products .product__container .product__content .product__options .edit.btn:hover, .delete.btn:hover {
-  opacity: 80%;
+.list-products .product__container .product__content .product__options .edit.btn:hover, .delete.btn:hover, show.more:hover {
+  opacity: 60%;
+}
+
+.list-products .product__container .product__content .product__options .show.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.list-products .product__container .product__content .product__options .show.more::before, .show.more::after {
+  content: ' ';
+  width: 2px;
+  height: 10px;
+  background-color: #000;
+  position: absolute;
+}
+
+.list-products .product__container .product__content .product__options .show.more::before {
+  transform: rotate(90deg);
 }

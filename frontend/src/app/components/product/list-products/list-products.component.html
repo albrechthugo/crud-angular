@@ -20,6 +20,7 @@
 
             <button class="edit btn" (click)="activeDeactiveModal(product)">Editar</button>
             <button class="delete btn" (click)="handleDeleteClick(product.id)">Deletar</button>
+            <button class="show more" routerLink="/product/{{product.id}}">+</button>
           </div>
         </div>
       </section>
@@ -28,8 +29,6 @@
     <app-edit-product
       *ngIf="openModal"
       (onClose)="modalClosed($event)"
-      [productEditable]="productEditable"
-    >
-    </app-edit-product>
+      [productEditable]="productEditable"></app-edit-product>
 
 </div>
