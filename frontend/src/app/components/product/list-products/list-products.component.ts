@@ -14,7 +14,7 @@ export class ListProductsComponent implements OnInit {
 
   openModal: boolean = false;
 
-  productEditable: any;
+  productEditable: Product;
 
   products: Product[];
 
