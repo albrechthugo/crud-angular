@@ -1,0 +1,59 @@
+.detail.mat-elevation-z2 {
+  background-color: #FFF;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.detail.mat-elevation-z2 .detail__title {
+  margin-bottom: 25px;
+  color: #7159c1;
+}
+
+.detail.mat-elevation-z2 .detail__content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.detail.mat-elevation-z2 .detail__content .detail__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.detail.mat-elevation-z2 .detail__content .detail__wrapper .first.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detail.mat-elevation-z2 .detail__content .detail__wrapper .first.row  h3 {
+  color: #000;
+  font-size: 1.1rem;
+}
+
+.detail.mat-elevation-z2 .detail__content .detail__wrapper .first.row strong {
+  color: #008000;
+  font-size: 1.2rem;
+}
+
+.detail.mat-elevation-z2 .detail__content .detail__wrapper .second.row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.detail.mat-elevation-z2 .detail__content .detail__wrapper .second.row h4 {
+  color: #000;
+}
