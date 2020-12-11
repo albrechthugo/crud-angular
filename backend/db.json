@@ -2,10 +2,17 @@
   "products": [
     {
       "name": "teste",
-      "price": "540",
-      "specifications": null,
-      "description": "fodaasew",
+      "price": "145",
+      "specifications": "aaaaaaaaaaaaaaa",
+      "description": "teste",
       "id": 1
+    },
+    {
+      "name": "novo 1111",
+      "price": "123",
+      "specifications": "novo",
+      "description": "novo ",
+      "id": 2
     }
   ]
 }
