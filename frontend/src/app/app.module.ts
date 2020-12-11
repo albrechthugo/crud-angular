@@ -20,8 +20,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ListProductsComponent } from './components/product/list-products/list-products.component';
 import { ProductLoadingComponent } from './components/product/product-loading/product-loading.component';
-import { ActionButtonComponent } from './components/buttons/action-button/action-button.component';
+// import { ActionButtonComponent } from './components/buttons/action-button/action-button.component';
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
+import { ShowProductComponent } from './pages/show-product/show-product.component';
+import { ProductDetailsComponent } from './components/product/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +35,10 @@ import { EditProductComponent } from './components/product/edit-product/edit-pro
     CreateProductComponent,
     ListProductsComponent,
     ProductLoadingComponent,
-    ActionButtonComponent,
+    // ActionButtonComponent,
     EditProductComponent,
+    ShowProductComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,
