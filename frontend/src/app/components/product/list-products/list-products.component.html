@@ -6,6 +6,7 @@
   </a>
 
     <app-product-loading *ngIf="!loadingProductList"></app-product-loading>
+    <app-empty-cart *ngIf="emptyCart"></app-empty-cart>
 
     <div *ngIf="loadingProductList">
       <section class="product__container" *ngFor="let product of products">
@@ -29,6 +30,7 @@
     <app-edit-product
       *ngIf="openModal"
       (onClose)="modalClosed($event)"
-      [productEditable]="productEditable"></app-edit-product>
+      [productEditable]="productEditable">
+    </app-edit-product>
 
 </div>

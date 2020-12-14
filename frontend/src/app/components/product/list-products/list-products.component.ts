@@ -1,4 +1,4 @@
-import {Component, OnInit, OnChanges} from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { ProductService } from "../product.service";
 import { Product } from "../product.model";
 
@@ -13,6 +13,8 @@ export class ListProductsComponent implements OnInit {
   loadingProductList: boolean = false;
 
   openModal: boolean = false;
+
+  emptyCart: boolean = false;
 
   productEditable: Product;
 
@@ -36,10 +38,14 @@ export class ListProductsComponent implements OnInit {
       if (products != null) {
         this.loadingProductList = true;
       }
+
+      if(products.length == 0) {
+        this.emptyCart = true;
+      }
     });
   }
 
-  ngOnChanges(changes: Product): void {}
+  // ngOnChanges(changes: Product): void {}
 
   activeDeactiveModal(product): void {
     this.productEditable = product;
