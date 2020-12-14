@@ -24,6 +24,7 @@ import { ProductLoadingComponent } from './components/product/product-loading/pr
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
 import { ShowProductComponent } from './pages/show-product/show-product.component';
 import { ProductDetailsComponent } from './components/product/product-details/product-details.component';
+import { EmptyCartComponent } from './components/utils/empty-cart/empty-cart.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ProductDetailsComponent } from './components/product/product-details/pr
     EditProductComponent,
     ShowProductComponent,
     ProductDetailsComponent,
+    EmptyCartComponent,
   ],
   imports: [
     BrowserModule,
