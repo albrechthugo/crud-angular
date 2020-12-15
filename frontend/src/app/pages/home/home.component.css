@@ -15,3 +15,10 @@
   margin-bottom: 25px;
   color: #7159c1;
 }
+
+@media (max-width: 1000px) {
+  .home.mat-elevation-z2 .home__title {
+    line-height: 26px;
+    text-align: center;
+  }
+}
