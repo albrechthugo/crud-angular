@@ -1,0 +1,87 @@
+.submit.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 200px;
+  height: 50px;
+  outline: 0;
+  border: 0;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #7159c1;
+  color: #fff;
+  transition: width 0.1s ease-in-out;
+}
+
+.submit.btn:hover {
+  width: 250px;
+}
+
+.return.btn {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background-color: #7159c1;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.return.btn:hover {
+  opacity: 80%;
+}
+
+.edit.btn, .delete.btn, .show.more {
+  width: 120px;
+  height: 40px;
+  border: 0;
+  border-radius: 7px;
+  outline: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  background-color: #1E88E5;
+}
+
+.delete.btn {
+  background-color: #F62D2D;
+}
+ 
+.edit.btn:hover, .delete.btn:hover, show.more:hover {
+  opacity: 60%;
+}
+
+.show.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.show.more::before, .show.more::after {
+  position: absolute;
+  content: ' ';
+  width: 2px;
+  height: 10px;
+  background-color: #000;
+}
+
+.show.more::before {
+  transform: rotate(90deg);
+}
