@@ -1,11 +1,14 @@
 <div class="list-products">
   <a routerLink="/">
-    <button class="return btn">
-      Voltar
-    </button>
+    <app-action-button
+      class="return btn"
+      textContent="Voltar"
+    >
+    </app-action-button>
   </a>
 
     <app-product-loading *ngIf="!loadingProductList"></app-product-loading>
+
     <app-empty-cart *ngIf="emptyCart"></app-empty-cart>
 
     <div *ngIf="loadingProductList">
@@ -16,12 +19,25 @@
           <h4>R${{product.price}}</h4>
 
           <div class="product__options">
-            <!-- <app-action-button></app-action-button>
-            <app-action-button></app-action-button> -->
+            <app-action-button 
+              class="edit btn" 
+              textContent="Editar"
+              (click)="activeDeactiveModal(product)"
+              >
+            </app-action-button>
 
-            <button class="edit btn" (click)="activeDeactiveModal(product)">Editar</button>
-            <button class="delete btn" (click)="handleDeleteClick(product.id)">Deletar</button>
-            <button class="show more" routerLink="/product/{{product.id}}">+</button>
+            <app-action-button 
+              class="delete btn" 
+              textContent="Deletar"
+              (click)="handleDeleteClick(product.id)"
+            >
+            </app-action-button>
+
+            <app-action-button 
+              class="show more"
+              routerLink="/product/{{product.id}}"
+            >
+            </app-action-button>
           </div>
         </div>
       </section>
@@ -30,7 +46,7 @@
     <app-edit-product
       *ngIf="openModal"
       (onClose)="modalClosed($event)"
-      [productEditable]="productEditable">
+      [productEditable]="productEditable"
+    >
     </app-edit-product>
-
 </div>

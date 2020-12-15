@@ -20,8 +20,11 @@
       <input type="text" name="specifications" maxlength="1000" placeholder="Processador: i9-9900K" [(ngModel)]="product.specifications">
     </div>
 
-    <button type="submit" (click)="handleSubmitClick()">
-      Adicionar
-    </button>
+    <app-action-button
+      class="submit btn" 
+      type="submit"
+      textContent="Adicionar"
+      (click)="handleSubmitClick()">
+    </app-action-button>
   </form>
 </div>
