@@ -20,7 +20,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ListProductsComponent } from './components/product/list-products/list-products.component';
 import { ProductLoadingComponent } from './components/product/product-loading/product-loading.component';
-// import { ActionButtonComponent } from './components/buttons/action-button/action-button.component';
+import { ActionButtonComponent } from './components/buttons/action-button/action-button.component';
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
 import { ShowProductComponent } from './pages/show-product/show-product.component';
 import { ProductDetailsComponent } from './components/product/product-details/product-details.component';
@@ -36,11 +36,12 @@ import { EmptyCartComponent } from './components/utils/empty-cart/empty-cart.com
     CreateProductComponent,
     ListProductsComponent,
     ProductLoadingComponent,
-    // ActionButtonComponent,
+    ActionButtonComponent,
     EditProductComponent,
     ShowProductComponent,
     ProductDetailsComponent,
     EmptyCartComponent,
+    ActionButtonComponent,
   ],
   imports: [
     BrowserModule,
