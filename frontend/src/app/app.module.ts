@@ -7,20 +7,18 @@ import { ProductModule } from './modules/product/product.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/template/header/header.component';
-import { FooterComponent } from './components/template/footer/footer.component';
-import { ActionButtonComponent } from './components/buttons/action-button/action-button.component';
+import { SharedModule } from './modules/shared/shared.module';
+import { ErrorsModule } from './modules/errors/errors.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    ActionButtonComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     ProductModule,
+    SharedModule,
+    ErrorsModule,
     MatCardModule,
     MatToolbarModule,
     RouterModule
