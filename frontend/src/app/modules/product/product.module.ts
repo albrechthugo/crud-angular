@@ -9,6 +9,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 import { EmptyCartComponent } from 'src/app/components/utils/empty-cart/empty-cart.component';
 import { CreateProductComponent } from './create-product/create-product.component';
@@ -20,7 +21,6 @@ import { ProductLoadingComponent } from './product-loading/product-loading.compo
 import { HomeComponent } from 'src/app/pages/home/home.component';
 import { ProductsComponent } from 'src/app/pages/products/products.component';
 import { ShowProductComponent } from 'src/app/pages/show-product/show-product.component';
-import { NotFoundComponent } from 'src/app/pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,9 +33,9 @@ import { NotFoundComponent } from 'src/app/pages/not-found/not-found.component';
     HomeComponent,
     ProductsComponent,
     ShowProductComponent,
-    NotFoundComponent,
   ],
   imports: [
+    SharedModule,
     CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -56,7 +56,6 @@ import { NotFoundComponent } from 'src/app/pages/not-found/not-found.component';
     HomeComponent,
     ProductsComponent,
     ShowProductComponent,
-    NotFoundComponent,
   ],
   providers: []
 })
