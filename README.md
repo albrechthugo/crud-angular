@@ -2,7 +2,7 @@
 
 # CRUD Angular - Cadastro de Produtos
 
-## Aplicação está funcional, próximo passo é lapidar o projeto para melhorar a experiência do usuário. 
+## Aplicação está funcional, no momento o projeto está sendo lapidado e as alterações mais recentes estão na branch `develop`. 
 
 ### Passos para começar: 
 
