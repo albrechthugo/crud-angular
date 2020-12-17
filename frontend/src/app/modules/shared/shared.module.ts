@@ -16,7 +16,7 @@ import { HeaderComponent } from 'src/app/components/template/header/header.compo
   imports: [
     MatToolbarModule,
     MatCardModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     HeaderComponent,
