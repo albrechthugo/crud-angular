@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SharedService } from 'src/app/modules/shared/shared.service';
 
 @Component({
   selector: 'app-not-found',
@@ -8,9 +9,11 @@ import { Router } from '@angular/router';
 })
 export class NotFoundComponent implements OnInit {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private sharedService: SharedService) {}
 
   ngOnInit(): void {
+    this.sharedService.changePageTitle('Página não encontrada | 404');
+
     setTimeout(() => {
       this.router.navigate(['/']);
     }, 3500)
