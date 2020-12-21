@@ -62,3 +62,15 @@
   border-radius: 30px;
   color: #7159c1;
 }
+
+@media (max-width: 600px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .mobile__nav {
+    display: none;
+  }
+}
