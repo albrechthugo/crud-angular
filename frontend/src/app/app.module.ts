@@ -9,10 +9,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppComponent } from './app.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { ErrorsModule } from './modules/errors/errors.module';
-
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +23,7 @@ import { ErrorsModule } from './modules/errors/errors.module';
     RouterModule,
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 
