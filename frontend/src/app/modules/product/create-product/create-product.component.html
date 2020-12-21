@@ -1,30 +1,90 @@
 <div class="form__container">
-  <form>
+  <form [formGroup]="createProductForm">
     <div class="form__field">
       <label>Nome</label>
-      <input type="text" name="name" placeholder="Apple MacBook Pro" [(ngModel)]="product.name">
+      <input
+        type="text"
+        name="name"
+        placeholder="Apple MacBook Pro"
+        [(ngModel)]="product.name"
+        formControlName="productName"
+        autofocus
+      >
+      <app-validation-message
+        *ngIf="createProductForm.get('productName').errors?.required"
+        textContent="Campo Obrigatório"
+      >
+      </app-validation-message>
     </div>
 
     <div class="form__field">
       <label>Descrição</label>
-      <input type="text" name="description" maxlength="1000" placeholder="Faça mais, descubra um novo conceito de produtividade..." [(ngModel)]="product.description">
+      <input
+        type="text"
+        name="description"
+        maxlength="1000"
+        placeholder="Faça mais, descubra um novo conceito de produtividade..."
+        [(ngModel)]="product.description"
+        formControlName="productDescription"
+      >
+      <app-validation-message
+        *ngIf="createProductForm.get('productDescription').errors?.required"
+        textContent="Campo Obrigatório"
+      >
+      </app-validation-message>
     </div>
 
     <div class="form__field">
       <label>Valor</label>
-      <input type="text" name="price" placeholder="R$25.309,00" [(ngModel)]="product.price" (keyup)="formatNumberToReal()">
+      <input
+        type="text"
+        name="price"
+        placeholder="R$25.309,00"
+        [(ngModel)]="product.price"
+        (keyup)="formatNumberToReal()"
+        formControlName="productPrice"
+      >
+      <app-validation-message
+        *ngIf="createProductForm.get('productPrice').errors?.required"
+        textContent="Campo Obrigatório"
+      >
+      </app-validation-message>
     </div>
 
     <div class="form__field">
       <label>Especificações técnicas</label>
-      <input type="text" name="specifications" maxlength="1000" placeholder="Processador: i9-9900K" [(ngModel)]="product.specifications">
+      <input
+        type="text"
+        name="specifications"
+        maxlength="1000"
+        placeholder="Processador: i9-9900K"
+        [(ngModel)]="product.specifications"
+        formControlName="productSpecifications"
+      >
+      <app-validation-message
+        *ngIf="createProductForm.get('productSpecifications').errors?.required"
+        textContent="Campo Obrigatório"
+      >
+      </app-validation-message>
     </div>
 
     <app-action-button
-      class="submit btn" 
+      class="submit btn"
       type="submit"
       textContent="Adicionar"
-      (click)="handleSubmitClick()">
+      (click)="handleSubmitClick()"
+      *ngIf="!createProductForm.invalid; else disabled"
+    >
     </app-action-button>
+
+    <ng-template #disabled>
+      <app-action-button
+        class="submit btn disabled"
+        type="submit"
+        textContent="Adicionar"
+      >
+      </app-action-button>
+    </ng-template>
+
   </form>
 </div>

@@ -1,4 +1,4 @@
-.submit.btn {
+.submit.btn, .submit.btn.disabled {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +17,11 @@
   background-color: #7159c1;
   color: #fff;
   transition: width 0.1s ease-in-out;
+}
+
+.submit.btn.disabled {
+  opacity: 50%;
+  cursor: not-allowed;
 }
 
 .submit.btn:hover {
@@ -59,7 +64,7 @@
 .delete.btn {
   background-color: #F62D2D;
 }
- 
+
 .edit.btn:hover, .delete.btn:hover, show.more:hover {
   opacity: 60%;
 }

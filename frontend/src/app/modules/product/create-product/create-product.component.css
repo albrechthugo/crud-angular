@@ -17,8 +17,10 @@
   height: 100%;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 5px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .form__container form .form__field label {
