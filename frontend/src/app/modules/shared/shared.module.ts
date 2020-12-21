@@ -6,12 +6,14 @@ import { RouterModule } from '@angular/router';
 import { ActionButtonComponent } from 'src/app/components/buttons/action-button/action-button.component';
 import { FooterComponent } from 'src/app/components/template/footer/footer.component';
 import { HeaderComponent } from 'src/app/components/template/header/header.component';
+import { ValidationMessageComponent } from './components/validation-message/validation-message.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     ActionButtonComponent,
-    FooterComponent
+    FooterComponent,
+    ValidationMessageComponent
   ],
   imports: [
     MatToolbarModule,
@@ -21,7 +23,8 @@ import { HeaderComponent } from 'src/app/components/template/header/header.compo
   exports: [
     HeaderComponent,
     ActionButtonComponent,
-    FooterComponent
+    FooterComponent,
+    ValidationMessageComponent
   ],
   providers: []
 })

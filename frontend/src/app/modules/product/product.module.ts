@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { MatCardModule } from '@angular/material/card';
@@ -45,6 +45,7 @@ import { ShowProductComponent } from 'src/app/pages/show-product/show-product.co
     MatSnackBarModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     CreateProductComponent,

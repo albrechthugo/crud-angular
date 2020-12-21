@@ -21,7 +21,7 @@ import { ErrorsModule } from './modules/errors/errors.module';
     ErrorsModule,
     MatCardModule,
     MatToolbarModule,
-    RouterModule
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
