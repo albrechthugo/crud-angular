@@ -1,0 +1,52 @@
+<div class="list-products">
+  <a routerLink="/">
+    <app-action-button
+      class="return btn"
+      textContent="Voltar"
+    >
+    </app-action-button>
+  </a>
+
+    <app-product-loading *ngIf="!loadingProductList"></app-product-loading>
+
+    <app-empty-cart *ngIf="emptyCart"></app-empty-cart>
+
+    <div *ngIf="loadingProductList">
+      <section class="product__container" *ngFor="let product of products">
+        <div class="product__content">
+          <strong>#{{product.id}}</strong>
+          <h3>{{product.name}}</h3>
+          <h4>R${{product.price}}</h4>
+
+          <div class="product__options">
+            <app-action-button 
+              class="edit btn" 
+              textContent="Editar"
+              (click)="activeDeactiveModal(product)"
+              >
+            </app-action-button>
+
+            <app-action-button 
+              class="delete btn" 
+              textContent="Deletar"
+              (click)="handleDeleteClick(product.id)"
+            >
+            </app-action-button>
+
+            <app-action-button 
+              class="show more"
+              routerLink="/product/{{product.id}}"
+            >
+            </app-action-button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <app-edit-product
+      *ngIf="openModal"
+      (onClose)="modalClosed($event)"
+      [productEditable]="productEditable"
+    >
+    </app-edit-product>
+</div>

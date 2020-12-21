@@ -17,8 +17,10 @@
   height: 100%;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 5px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .form__container form .form__field label {
@@ -42,30 +44,4 @@
 
 .form__container form .form__field input:focus-within {
   border-bottom: 2px solid #7159c1;
-}
-
-.form__container form button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 200px;
-  height: 50px;
-  outline: 0;
-  border: 0;
-  border-radius: 30px;
-  text-transform: uppercase;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: #7159c1;
-  color: #fff;
-  transition: width 0.1s ease-in-out;
-}
-
-.form__container form button:hover {
-  width: 250px;
-  background-color: #6f4ede;
 }

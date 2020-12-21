@@ -1,0 +1,15 @@
+mat-card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 40rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9fcff;
+}
+
+mat-card-title {
+  color: #7159c1;
+}

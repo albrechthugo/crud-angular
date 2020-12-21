@@ -1,6 +1,8 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductService } from "../product.service";
 import { Product } from "../product.model";
+import { SharedService } from '../../shared/shared.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-list-products',
@@ -27,26 +29,22 @@ export class ListProductsComponent implements OnInit {
     specifications: ''
   };
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, 
+              private sharedService: SharedService, 
+              private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.productService.getProductList().subscribe(products => {
-      this.products = products;
-    });
+    this.products = this.activatedRoute.snapshot.data['products'];
 
-    this.productService.getProductList().subscribe(products => {
-      if (products != null) {
-        this.loadingProductList = true;
-      }
+    if(this.products != null) {
+      this.loadingProductList = true;
+    }
 
-      if(products.length == 0) {
-        this.emptyCart = true;
-      }
-    });
+    if(this.products.length == 0) {
+      this.emptyCart = true;
+    }
   }
-
-  // ngOnChanges(changes: Product): void {}
-
+  
   activeDeactiveModal(product): void {
     this.productEditable = product;
     this.openModal = !this.openModal;
@@ -58,8 +56,7 @@ export class ListProductsComponent implements OnInit {
 
   handleDeleteClick(id: number): void {
     this.productService.deleteProduct(id).subscribe(() => {
-      this.productService.showConfirmationPopUp('Produto DELETADO com sucesso!');
+      this.sharedService.showConfirmationPopUp('Produto DELETADO com sucesso!');
     });
   }
-
 }

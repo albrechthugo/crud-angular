@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/modules/shared/shared.service';
 
 @Component({
   selector: 'app-products',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sharedService: SharedService) {}
 
   ngOnInit(): void {
+    this.sharedService.changePageTitle('Confira nossos produtos já cadastrados');
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ProductService } from '../product.service';
 import { Product } from '../product.model';
 import { Router } from '@angular/router';
+import { SharedService } from '../../shared/shared.service';
 
 @Component({
   selector: 'app-edit-product',
@@ -24,7 +25,7 @@ export class EditProductComponent implements OnInit {
     specifications: '',
   }
 
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(private productService: ProductService, private sharedService: SharedService,private router: Router) {}
 
   ngOnInit(): void {
     this.product = this.productEditable;
@@ -36,7 +37,7 @@ export class EditProductComponent implements OnInit {
 
   handleEditClick() {
     this.productService.editProduct(this.product).subscribe(() => {
-      this.productService.showConfirmationPopUp('Produto EDITADO com sucesso!');
+      this.sharedService.showConfirmationPopUp('Produto EDITADO com sucesso!');
       this.closeModal();
     });
   }
