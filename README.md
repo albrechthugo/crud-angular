@@ -2,7 +2,7 @@
 
 # CRUD Angular - Cadastro de Produtos
 
-## Aplicação está funcional, no momento o projeto está sendo lapidado e as alterações mais recentes estão na branch `develop`. 
+## Aplicação está 100%
 
 ### Passos para começar: 
 
